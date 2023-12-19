@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
             'name' => 'ceo',
             'email' => 'ceo@test.com',
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password: U{{]Mz+g5!7qF8?4
+            'password' => '$2y$12$M3O7pZQXEgiLdwPejFGnN.hVfwGepOGcX8OiprJA5wCmBcuwvRJV6', // password: U{{]Mz+g5!7qF8?4
         ])->assignRole('user', 'manager', 'ceo','admin');
 
         // Assistent-CEO account
