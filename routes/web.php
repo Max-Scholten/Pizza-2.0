@@ -16,16 +16,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Pizza/Home');
 });
-
+/*Route::get('/', function () {
+    return view('welcome');
+});*/
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/welcome', function () {
     return view('welcome');
-})->middleware(['auth', 'verified'])->name('welcome');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/Menu', function () {
     return view('/Pizza/Menu');
