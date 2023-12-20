@@ -18,56 +18,56 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@test.com',
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password: s3i31v6/h%83!\G1
-        ])->assignRole('user', 'manager', 'admin');
+            'password' => '$2y$12$9tSWrWdKC2.A1W0L2hDpweqJieqD/UU/CspiTRw2hA8rUkXMUOtVm', // password: s3i31v6/h%83!\G1
+        ])->assignRole('customer','employee','manager','assistent-ceo','ceo', 'admin');
 
         // CEO account
         User::create([
             'name' => 'ceo',
             'email' => 'ceo@test.com',
             'email_verified_at' => now(),
-            'password' => '$2y$12$M3O7pZQXEgiLdwPejFGnN.hVfwGepOGcX8OiprJA5wCmBcuwvRJV6', // password: U{{]Mz+g5!7qF8?4
-        ])->assignRole('user', 'manager', 'ceo','admin');
+            'password' => '$2y$12$OyLqqeVRDY4D1PD9O1bgu.PdWY0c.H1ckWHeGmSySnHu5q9fraSpC', // password: U{{]Mz+g5!7qF8?4
+        ])->assignRole('customer','employee','manager','assistent-ceo','ceo');
 
         // Assistent-CEO account
         User::create([
             'name' => 'assistent-ceo',
             'email' => 'assistent-ceo@test.com',
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password: V9Y&7QkHRgam_Y=6
-        ])->assignRole('user', 'manager','assistent-ceo','ceo', 'admin');
+            'password' => '$2y$12$peG95sTBmiFkp1b99NjepuA9SzSho0RQo1vL6VXFNPQVXmYNsveta', // password: V9Y&7QkHRgam_Y=6
+        ])->assignRole('customer','employee','manager','assistent-ceo');
 
         // Finance-Worker account
         User::create([
             'name' => 'finance-worker',
             'email' => 'finance-worker@test.com',
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password: .1LnJP)4I,Y-04(u
-        ])->assignRole('user', 'manager','finance-worker','assistent-ceo','ceo', 'admin');
+            'password' => '$2y$12$vh6cNGFIKG67LHa0WTOSjevIpyv.QLF2Y3bvHrrhfvPfuYk1p8VFS', // password: .1LnJP)4I,Y-04(u
+        ])->assignRole('customer','employee','manager','finance-worker');
 
         // Manager account
         User::create([
             'name' => 'manager',
             'email' => 'manager@test.com',
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password: aLN$w7gfmb!4dSVH
-        ])->assignRole('manager');
+            'password' => '$2y$12$ZSjhl5zofXiWb83IqtzPXu6lp3SIvU0H9Brx3iysimIQF.4tN.Pl2', // password: aLN$w7gfmb!4dSVH
+        ])->assignRole('customer','employee','manager');
 
         // Employee account
         User::create([
             'name' => 'employee',
             'email' => 'employee@test.com',
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password: tri!JP2y9nB5l'vE
-        ])->assignRole('manager');
+            'password' => '$2y$12$X5fwZMxZTt4bhBke.kf4EO.oOPSlVncV15SgJVvxIohHAHRdboTwq', // password: tri!JP2y9nB5l'vE
+        ])->assignRole('customer','employee');
 
         // User account
         User::create([
-            'name' => 'user',
-            'email' => 'user@test.com',
+            'name' => 'customer',
+            'email' => 'customer@test.com',
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password: p5YcnL4pvyeoi}TB
-        ])->assignRole('user');
+            'password' => '$2y$12$XoG0Cn7Wlw/jaKyCS2C1Ke7wo3eaS2s8BtbFUE8CWe19LdQZeOakS', // password: p5YcnL4pvyeoi}TB
+        ])->assignRole('customer');
 
     }
 }

@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app1-layout>
     <x-slot:title>
         Home
     </x-slot:title>
@@ -8,4 +8,4 @@
             <br>
         </div>
     </div>
-</x-app-layout>
+</x-app1-layout>

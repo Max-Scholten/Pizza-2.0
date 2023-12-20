@@ -15,20 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Pizza/Home');
-});
 /*Route::get('/', function () {
-    return view('welcome');
+    return view('Pizza/Home');
 });*/
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/welcome', function () {
-    return view('welcome');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::get('/Home', function () {
+    return view('/Pizza/Home');
+});
 Route::get('/Menu', function () {
     return view('/Pizza/Menu');
 });
@@ -51,13 +50,9 @@ Route::middleware('auth', 'role:manager')->group(
 
 // Contact page
 Route::get('/contact', function () {
-    return view('/talentsleutel/contact');
+    return view('/Pizza/contact');
 });
 
-// Dasboard page (not used (yet))
-Route::get('/dashboard', function () {
-    return redirect('/');
-})->middleware(['auth', 'verified'])->name('dashboard');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
