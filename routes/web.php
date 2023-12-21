@@ -26,10 +26,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/Home', function () {
-    return view('/Pizza/Home');
+    return view('/Pizza/home');
 });
 Route::get('/Menu', function () {
-    return view('/Pizza/Menu');
+    return view('/Pizza/menu');
 });
 // Questionnaire routes
 Route::middleware('auth', 'role:user')->group(

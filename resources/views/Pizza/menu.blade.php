@@ -1,6 +1,6 @@
-<x-app1-layout>
+<x-nav-layout>
     <x-slot:title>
-        Home
+        Menu
     </x-slot:title>
     <div>
         <div class="text-3xl object-center">
@@ -8,4 +8,4 @@
             <br>
         </div>
     </div>
-</x-app1-layout>
+</x-nav-layout>
