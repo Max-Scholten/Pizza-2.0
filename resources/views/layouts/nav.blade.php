@@ -22,7 +22,7 @@
             <i class="bi bi-house-door-fill"></i>
             <box-icon name='cart'></box-icon>
             <i class='bx bx-cart'></i>
-            <a href="/contact" class="text-[15px] ml-2 text-gray-200 font-bold">Cart</a>
+            <a href="/cart" class="text-[15px] ml-2 text-gray-200 font-bold">Cart</a>
 
         </div>
     </header>
@@ -41,39 +41,44 @@
             <div class="my-2 bg-gray-600 h-[1px]"></div>
         </div>
 
+
+            @role('customer')
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bxs-home'></i>
-            <a href="/" class="text-[15px] ml-4 text-gray-200 font-bold">Home</a>
+            <a href="/home" class="text-[15px] ml-4 text-gray-200 font-bold">Home</a>
         </div>
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
-            <i class='bx bx-question-mark' ></i>
-            <a href="/Menu" class="text-[15px] ml-4 text-gray-200 font-bold">Menu</a>
+            <i class='bx bx-food-menu'></i>
+            <a href="/menu" class="text-[15px] ml-4 text-gray-200 font-bold">Menu</a>
         </div>
-        {{--    @role('user')
-
-            @endrole--}}
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-bookmark-fill"></i>
-            <i class='bx bx-calendar' ></i>
-            <a href="/gesprek-inplannen" class="text-[15px] ml-4 text-gray-200 font-bold">About us</a>
+            <i class='bx bx-group'></i>
+            <a href="/over-ons" class="text-[15px] ml-4 text-gray-200 font-bold">Over ons</a>
         </div>
-        {{--    @role('user|manager')
+            @endrole
 
-            @endrole--}}
-        {{--@role('manager')
+            @role('user|manager')
+            @endrole
+        @role('manager')
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
-            <i class='bx bx-list-check'></i>
-            <a href="/resultaten" class="text-[15px] ml-4 text-gray-200 font-bold">Resultaten </a>
+            <i class='bx bxs-home'></i>
+            <a href="/home" class="text-[15px] ml-4 text-gray-200 font-bold">Home</a>
         </div>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white ">
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
-            <i class='bx bxs-report' ></i>
-            <a href="/raporten" class="text-[15px] ml-4 text-gray-200 font-bold">Raporten</a>
+            <i class='bx bx-food-menu'></i>
+            <a href="/menu" class="text-[15px] ml-4 text-gray-200 font-bold">Menu</a>
         </div>
-        @endrole--}}
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
+            <i class="bi bi-bookmark-fill"></i>
+            <i class='bx bx-group'></i>
+            <a href="/over-ons" class="text-[15px] ml-4 text-gray-200 font-bold">Over ons</a>
+        </div>
+        @endrole
         <div class="my-4 bg-gray-600 h-[1px]"></div>
         <div
             class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white fixed bottom-0"
@@ -84,7 +89,7 @@
         </div>
 
     </div>
-{{--    <footer class="border-t-2 py-16 flex flex-col ">
+    <footer class="border-t-2 py-16 flex flex-col  ">
         <div
             class=" flex flex-grow-0 flex-col md:flex-row  text-center  mb-16 space-y-8   md:space-y-0  sm:space-x-6 justify-center md:justify-around items-center">
             <a class="md:self-start items-center" href="#">
@@ -161,6 +166,6 @@
             <span class="text-sm text-gray-500 sm:text-center"><a href="https://github.com/RagAndRoll" target="_blank" class="hover:underline">© 2022  RagAndRoll. All Rights Reserved.</a></span>
         </div>
     </footer>
-    --}}</body>
+    </body>
 
     </html>
