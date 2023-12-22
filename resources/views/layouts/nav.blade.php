@@ -22,7 +22,7 @@
             <i class="bi bi-house-door-fill"></i>
             <box-icon name='cart'></box-icon>
             <i class='bx bx-cart'></i>
-            <a href="/contact" class="text-[15px] ml-2 text-gray-200 font-bold">Cart</a>
+            <a href="/cart" class="text-[15px] ml-2 text-gray-200 font-bold">Cart</a>
 
         </div>
     </header>
@@ -44,12 +44,12 @@
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bxs-home'></i>
-            <a href="/" class="text-[15px] ml-4 text-gray-200 font-bold">Home</a>
+            <a href="/home" class="text-[15px] ml-4 text-gray-200 font-bold">Home</a>
         </div>
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bx-question-mark' ></i>
-            <a href="/Menu" class="text-[15px] ml-4 text-gray-200 font-bold">Menu</a>
+            <a href="/menu" class="text-[15px] ml-4 text-gray-200 font-bold">Menu</a>
         </div>
         {{--    @role('user')
 
