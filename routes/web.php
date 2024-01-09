@@ -24,21 +24,12 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-//Home page
-Route::get('/home', function () {
+
+Route::get('/Home', function () {
     return view('/Pizza/home');
 });
-//Menu page
-Route::get('/menu', function () {
+Route::get('/Menu', function () {
     return view('/Pizza/menu');
-});
-
-Route::get('/over-ons', function () {
-    return view('/Pizza/over-ons');
-});
-// Shopping Cart page
-Route::get('/cart', function () {
-    return view('/Pizza/cart');
 });
 // Questionnaire routes
 Route::middleware('auth', 'role:user')->group(
@@ -57,7 +48,10 @@ Route::middleware('auth', 'role:manager')->group(
     }
 );
 
-
+// Contact page
+Route::get('/contact', function () {
+    return view('/Pizza/contact');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
