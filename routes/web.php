@@ -24,12 +24,21 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/Home', function () {
+//Home page
+Route::get('/home', function () {
     return view('/Pizza/home');
 });
-Route::get('/Menu', function () {
+//Menu page
+Route::get('/menu', function () {
     return view('/Pizza/menu');
+});
+//Over ons page
+Route::get('/over-ons', function () {
+    return view('/Pizza/over-ons');
+});
+//Over ons page
+Route::get('/cart', function () {
+    return view('/Pizza/cart');
 });
 // Questionnaire routes
 Route::middleware('auth', 'role:user')->group(
