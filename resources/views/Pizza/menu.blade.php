@@ -21,11 +21,11 @@
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Deze heerlijke pizza is bedekt met een smeuïge tomatensaus en rijkelijk bestrooid met plakjes pittige salami. </p>
 
 
-                            <a target='_blank' href='foodiesapp://food/1001' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                View on foodies
+                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Bestelen
                             </a>
-                            <a target='_blank' href="https://apps.apple.com/us/app/id1493631471" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                Download app
+                            <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Placeholder app
                             </a>
                         </div>
                     </div>
@@ -43,11 +43,11 @@
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Breng een tropische twist naar je maaltijd met de pizza Hawaii. Deze heerlijke combinatie van zoet en hartig bevat tomatensaus, sappige stukjes ham, ananas en mozzarella. </p>
 
 
-                            <a target='_blank' href='foodiesapp://food/1001' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                View on foodies
+                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Bestelen
                             </a>
-                            <a target='_blank' href="https://apps.apple.com/us/app/id1493631471" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                Download app
+                            <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Placeholder app
                             </a>
                         </div>
                     </div>
@@ -65,11 +65,11 @@
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Geniet van de frisse smaken van de zee met deze overheerlijke pizza tonno. De basis bestaat uit tomatensaus en mozzarella, maar de ster van de show is tonijn - mals, sappig en boordevol smaak.</p>
 
 
-                            <a target='_blank' href='foodiesapp://food/1001' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                View on foodies
+                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Bestelen
                             </a>
-                            <a target='_blank' href="https://apps.apple.com/us/app/id1493631471" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                Download app
+                            <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Placeholder app
                             </a>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
             </div>
             <br>
             <div class='flex items-center justify-center min-h-screen from-[#F9F5F3] via-[#F9F5F3] to-[#F9F5F3] bg-gradient-to-br px-2'>
-                <div class='w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
+                <div class='w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-auto'>
                     <div class='max-w-md mx-auto'>
                         <div class='h-[236px]' style='background-image:url(https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*);background-size:cover;background-position:center'>
                         </div>
@@ -91,16 +91,16 @@
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Een eenvoudige maar onweerstaanbare traktatie voor kaasliefhebbers! Deze pizza is overladen met een romige mix van mozzarella, cheddar, en Parmezaanse kazen. De zachte, smeltende kaas vormt een zalige laag bovenop de perfect gebakken korst. </p>
 
 
-                            <a target='_blank' href='foodiesapp://food/1001' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                View on foodies
+                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Bestelen
                             </a>
-                            <a target='_blank' href="https://apps.apple.com/us/app/id1493631471" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                Download app
+                            <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Placeholder app
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class='w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
+                <div class='w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-auto'>
                     <div class='max-w-md mx-auto'>
                         <div class='h-[236px]' style='background-image:url(https://thymeristorante.com/wp-content/uploads/2018/05/Pizza-al-Salmone-1.jpg);background-size:cover;background-position:center'>
                         </div>
@@ -113,17 +113,18 @@
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Duik in de wereld van luxe met de pizza samone. Deze exquise creatie combineert romige zalm met een verrukkelijke witte saus, mozzarella en verse dille. De lichte, luchtige korst vormt het ideale canvas voor deze rijke en verfijnde smaken. </p>
 
 
-                            <a target='_blank' href='foodiesapp://food/1001' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                View on foodies
+                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Bestelen
                             </a>
-                            <a target='_blank' href="https://apps.apple.com/us/app/id1493631471" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
-                                Download app
+                            <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                                Placeholder app
                             </a>
                         </div>
                     </div>
                 </div>
-
             </div>
+            <br>
+            <br>
         </div>
     </div>
 

@@ -18,6 +18,7 @@
         {{ $slot }}
     </main>
     <header class="bg-green-800 h-16 flex justify-end items-center fixed top-0 right-0 z-20 w-full">
+
         <div class="bg-green-800 flex items-center cursor-pointer text-white p-5">
             <i class="bi bi-house-door-fill"></i>
             <box-icon name='cart'></box-icon>
@@ -32,7 +33,7 @@
         <div class="text-gray-100 text-xl">
             <div class="p-2.5 mt-1 bg-bg-green-800 flex items-center">
                 <h1 class="font-bold text-gray-200 text-[35px] ml-3">
-                    {{--<img src="/images/Test.png" alt="Test Image" class="max-h-full" />--}}
+                    <img src="/images/Logo.jpg" alt="Test Image" class="h-24" />
                 </h1>
                 <i
                     class="bi bi-x cursor-pointer ml-28 lg:hidden"
