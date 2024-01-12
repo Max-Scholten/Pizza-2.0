@@ -144,7 +144,6 @@
         <br>
         <button onclick="submitOrder()">Order</button>
     `;
-
             customOrderWindow.document.body.innerHTML = content;
         }
 
