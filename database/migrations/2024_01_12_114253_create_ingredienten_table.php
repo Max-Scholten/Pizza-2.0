@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('status', function (Blueprint $table) {
+        Schema::create('ingredients', function (Blueprint $table) {
+            // ... (same as your existing migration)
             $table->id();
-            $table->text('type');
+            $table->string('topping');
+            $table->decimal('price', 8, 2); // Adjust precision and scale as needed
             $table->timestamps();
         });
+
     }
 
     /**
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('status');
+        Schema::dropIfExists('ingredienten');
     }
 };

@@ -9,14 +9,13 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('size');
-            $table->text('toppings');
-            $table->decimal('total_price', 8, 2);
+            $table->text('topping');
             $table->string('status_id');
             $table->timestamps();
         });
