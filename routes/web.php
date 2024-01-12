@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\OrderController;
+
+Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
+Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
 
 /*Route::get('/', function () {
     return view('Pizza/Home');

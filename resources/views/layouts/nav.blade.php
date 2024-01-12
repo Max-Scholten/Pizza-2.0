@@ -7,33 +7,31 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>{{ $title }}</title>
         @vite('resources/css/app.css')
+        <script src="script.js" defer></script>
 
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
-
-    <body class=bg-white>
-    <main class="ml-[300px] p-4 mt-14">
-        {{ $slot }}
-    </main>
     <header class="bg-green-800 h-16 flex justify-end items-center fixed top-0 right-0 z-20 w-full">
-
         <div class="bg-green-800 flex items-center cursor-pointer text-white p-5">
             <i class="bi bi-house-door-fill"></i>
             <box-icon name='cart'></box-icon>
             <i class='bx bx-cart'></i>
-            <a href="/cart" class="text-[15px] ml-2 text-gray-200 font-bold">Shopping cart</a>
-
+            <a href="/cart" class="text-[15px] h-6  ml-2 text-gray-200 font-bold">Shopping cart</a>
         </div>
     </header>
+    <body class=bg-white>
+    <main class="ml-[300px] p-4 mt-14">
+        {{ $slot }}
+    </main>
+
 
     <div class="z-40 sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-green-800">
-
         <div class="text-gray-100 text-xl">
             <div class="p-2.5 mt-1 bg-bg-green-800 flex items-center">
                 <h1 class="font-bold text-gray-200 text-[35px] ml-3">
-                    <img src="/images/Logo.jpg" alt="Test Image" class="h-24" />
+                    <img src="images/Logo-White.png" alt="Test Image" class=" object-center h-48"/>
                 </h1>
                 <i
                     class="bi bi-x cursor-pointer ml-28 lg:hidden"
@@ -42,22 +40,25 @@
             <div class="my-2 bg-gray-600 h-[1px]"></div>
         </div>
 
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bxs-home'></i>
-            <a href="/home" class="text-[15px] ml-4 text-gray-200 font-bold">Home</a>
+            <a href="/home" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Home</a>
         </div>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
+        <br>
+        <br>
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bx-food-menu' ></i>
-            <a href="/menu" class="text-[15px] ml-4 text-gray-200 font-bold">Menu</a>
+            <a href="/menu" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Menu</a>
 
         </div>
-
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white">
+        <br>
+        <br>
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bx-group' ></i>
-            <a href="/over-ons" class="text-[15px] ml-4 text-gray-200 font-bold">Over ons</a>
+            <a href="/over-ons" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Over ons</a>
         </div>
             @role('user')
             @endrole

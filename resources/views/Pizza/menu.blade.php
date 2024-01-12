@@ -6,7 +6,6 @@
         <div class="text-3xl object-center">
             <h1>Stonks-Pizza menu</h1>
             <br>
-
             <div class='flex items-center justify-center min-h-screen from-[#F9F5F3] via-[#F9F5F3] to-[#F9F5F3] bg-gradient-to-br px-2'>
                 <div class='w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
                     <div class='max-w-md mx-auto'>
@@ -20,10 +19,9 @@
                             </div>
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Deze heerlijke pizza is bedekt met een smeuïge tomatensaus en rijkelijk bestrooid met plakjes pittige salami. </p>
 
-
-                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                            <button  onclick="openCustomOrder()" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Bestelen
-                            </a>
+                            </button>
                             <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Placeholder app
                             </a>
@@ -43,9 +41,9 @@
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Breng een tropische twist naar je maaltijd met de pizza Hawaii. Deze heerlijke combinatie van zoet en hartig bevat tomatensaus, sappige stukjes ham, ananas en mozzarella. </p>
 
 
-                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                            <button  onclick="openCustomOrder()" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Bestelen
-                            </a>
+                            </button>
                             <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Placeholder app
                             </a>
@@ -65,9 +63,9 @@
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Geniet van de frisse smaken van de zee met deze overheerlijke pizza tonno. De basis bestaat uit tomatensaus en mozzarella, maar de ster van de show is tonijn - mals, sappig en boordevol smaak.</p>
 
 
-                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                            <button  onclick="openCustomOrder()" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Bestelen
-                            </a>
+                            </button>
                             <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Placeholder app
                             </a>
@@ -76,7 +74,7 @@
                 </div>
                 <br>
             </div>
-            <br>
+
             <div class='flex items-center justify-center min-h-screen from-[#F9F5F3] via-[#F9F5F3] to-[#F9F5F3] bg-gradient-to-br px-2'>
                 <div class='w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-auto'>
                     <div class='max-w-md mx-auto'>
@@ -91,9 +89,9 @@
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Een eenvoudige maar onweerstaanbare traktatie voor kaasliefhebbers! Deze pizza is overladen met een romige mix van mozzarella, cheddar, en Parmezaanse kazen. De zachte, smeltende kaas vormt een zalige laag bovenop de perfect gebakken korst. </p>
 
 
-                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                            <button  onclick="openCustomOrder()" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Bestelen
-                            </a>
+                            </button>
                             <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Placeholder app
                             </a>
@@ -113,9 +111,9 @@
                             <p class='text-[#7C7C80] font-[15px] mt-6'>Duik in de wereld van luxe met de pizza samone. Deze exquise creatie combineert romige zalm met een verrukkelijke witte saus, mozzarella en verse dille. De lichte, luchtige korst vormt het ideale canvas voor deze rijke en verfijnde smaken. </p>
 
 
-                            <a target='_blank' href='#' class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
+                            <button  onclick="openCustomOrder()" class='block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-[#FFC933] rounded-[14px] hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Bestelen
-                            </a>
+                            </button>
                             <a target='_blank' href="#" class='block mt-1.5 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform rounded-[14px] hover:bg-[#F2ECE7] hover:text-[#000000dd] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80'>
                                 Placeholder app
                             </a>
@@ -127,5 +125,33 @@
             <br>
         </div>
     </div>
+    <script>
+        function openCustomOrder() {
+            const customOrderWindow = window.open('', '_blank', 'width=' + (window.innerWidth / 4) + ',height=' + window.innerHeight / 2);
 
+            // Content for the custom order window
+            const content = `
+        <img src="selectedPizza.jpg" alt="Selected Pizza">
+        <label>Size:</label>
+        <input type="radio" name="size" value="small" checked> Small
+        <input type="radio" name="size" value="medium"> Medium
+        <input type="radio" name="size" value="large"> Large
+        <br>
+        <label>Toppings:</label>
+        <input type="checkbox" name="topping" value="cheese" checked> Cheese
+        <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+        <input type="checkbox" name="topping" value="mushrooms"> Mushrooms
+        <br>
+        <button onclick="submitOrder()">Order</button>
+    `;
+
+            customOrderWindow.document.body.innerHTML = content;
+        }
+
+        function submitOrder() {
+            // Process the order and send it to the shopping cart page
+            // You may use AJAX to send the order details to the server
+            // and update the shopping cart dynamically.
+        }
+    </script>
 </x-nav-layout>
