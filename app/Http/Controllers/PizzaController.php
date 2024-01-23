@@ -1,65 +1,47 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use App\Models\StronkPizza;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class PizzaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
+// Other actions...
+public function index()
+{
+    $pizzas = Order::all(); // Assuming you have a Pizza model
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+    return view('menu', compact('pizzas'));
+}
+public function showMenu()
+{
+    $pizzas = Order::all(); // Assuming you have a Pizza model
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+    return view('Pizza/menu', compact('pizzas'));
+}
+public function addToCart(Request $request)
+{
+$pizzaId = $request->input('pizza_id');
+$size = $request->input('size') ;
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(StronkPizza $stronkPizza)
-    {
-        //
-    }
+// Retrieve the selected pizza from the database (assuming you have a Pizza model)
+$pizza = Order::find($pizzaId);
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(StronkPizza $stronkPizza)
-    {
-        //
-    }
+// Add the selected pizza to the user's cart (you might use a cart service or a session)
+$cart = session('cart', []);
+$cart[] = [
+'pizza' => $pizza,
+'size' => $size,
+];
+session(['cart' => $cart]);
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, StronkPizza $stronkPizza)
-    {
-        //
-    }
+return redirect()->route('menu')->with('success', 'Pizza added to cart!');
+}
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(StronkPizza $stronkPizza)
-    {
-        //
-    }
+public function showCart()
+{
+$cart = session('cart', []);
+
+return view('Pizza/cart', compact('cart'));
+}
 }

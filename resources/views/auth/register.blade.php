@@ -4,9 +4,35 @@
 
         <!-- Name -->
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            <x-input-label for="naam" :value="__('Naam')" />
+            <x-text-input id="naam" class="block mt-1 w-full" type="text" name="naam" :value="old('naam')" required autofocus autocomplete="naam" />
+            <x-input-error :messages="$errors->get('naam')" class="mt-2" />
+        </div>
+        <!-- Straat -->
+        <div class="mt-4">
+            <x-input-label for="straat" :value="__('Straat')" />
+            <x-text-input id="straat" class="block mt-1 w-full" type="text" name="straat" :value="old('straat')" />
+            <x-input-error :messages="$errors->get('straat')" class="mt-2" />
+        </div>
+        <!-- Huisnummer -->
+        <div class="mt-4">
+            <x-input-label for="huisnummer" :value="__('Huisnummer')" />
+            <x-text-input id="huisnummer" class="block mt-1 w-full" type="text" name="huisnummer" :value="old('huisnummer')" />
+            <x-input-error :messages="$errors->get('huisnummer')" class="mt-2" />
+        </div>
+
+        <!-- Woonplaats -->
+        <div class="mt-4">
+            <x-input-label for="woonplaats" :value="__('Woonplaats')" />
+            <x-text-input id="woonplaats" class="block mt-1 w-full" type="text" name="woonplaats" :value="old('woonplaats')" />
+            <x-input-error :messages="$errors->get('woonplaats')" class="mt-2" />
+        </div>
+
+        <!-- Telephone -->
+        <div class="mt-4">
+            <x-input-label for="tel" :value="__('Telephone')" />
+            <x-text-input id="tel" class="block mt-1 w-full" type="tel" name="tel" :value="old('tel')" />
+            <x-input-error :messages="$errors->get('tel')" class="mt-2" />
         </div>
 
         <!-- Email Address -->

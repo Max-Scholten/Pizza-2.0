@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Maat;
+use App\Models\Status;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
 
 class StatusSeeder extends Seeder
 {
@@ -17,18 +18,19 @@ class StatusSeeder extends Seeder
             ['Aan het verwerken'],
             ['Aan het bereiden'],
             ['In de oven'],
-            ['Klaar voor bezorgen'],
+            ['Klaar voor bezorging'],
             ['Onderweg'],
-            ['Bezorgd']
+            ['Bezorgd'],
 
         ];
 
         foreach ($status as $statusData) {
-            $statusName = $statusData[0];
+            $statusValue = $statusData[0];
 
-            Maat::create([
-                'status' => $statusName,
+            Status::create([
+                'status' => $statusValue
             ]);
         }
+
     }
 }

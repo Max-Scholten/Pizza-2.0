@@ -14,17 +14,19 @@ class MaatSeeder extends Seeder
     public function run(): void
     {
         $maat = [
-            ['Groot'],
-            ['Medium'],
-            ['Klein'],
+            ['Groot','1.2'],
+            ['Medium','1.0'],
+            ['Klein','0.8'],
 
         ];
 
         foreach ($maat as $maatData) {
             $maatName = $maatData[0];
+            $maatFactor = $maatData[1];
 
             Maat::create([
                 'grote' => $maatName,
+                'factor' => $maatFactor,
             ]);
     }
 }}

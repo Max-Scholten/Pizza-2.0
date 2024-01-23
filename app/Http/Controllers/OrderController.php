@@ -2,35 +2,42 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\User;
+use App\Models\Maat;
+use App\Models\Ingredient;
+use App\Models\Status;
+use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    public function create()
+    public function edit($id)
     {
-        // Logic for displaying the order pop-up with view options
-        // This can involve fetching available toppings and sizes from the database
-        return view('orders.create');
+        $order = Order::findOrFail($id);
+        $users = User::all();
+        $maats = Maat::all();
+        $ingredient = Ingredient::all();
+        $statuses = Status::all();
+
+        return view('orders.edit', compact('order', 'users', 'maats', 'ingredient', 'statuses'));
     }
 
-    public function store(Request $request)
+
+
+    public function update(Request $request, $id)
     {
-        // Logic for storing the order in the database
-        $order = Order::create([
-            'user_id' => auth()->user()->id,
-            'toppings' => $request->input('toppings'),
-            'size' => $request->input('size'),
-            'total_price' => $request->input('total_price'),
+        $order = Order::findOrFail($id);
+
+        $request->validate([
+            'user_id' => 'nullable|exists:users,id',
+            'grote_id' => 'nullable|exists:maats,id',
+            'ingredient_id' => 'nullable|exists:ingredient,id',
+            'status_id' => 'nullable|exists:statuses,id',
+            // Add validation rules for other fields if needed
         ]);
 
-        // Redirect to further ordering or cart menu
-        return redirect()->route('orders.create')->with('order', $order);
-    }
+        $order->update($request->all());
 
-    public function show(Order $order)
-    {
-        // Logic for displaying the order details
-        return view('orders.show', compact('order'));
+        return redirect()->route('orders.index')->with('success', 'Order updated successfully');
     }
 }

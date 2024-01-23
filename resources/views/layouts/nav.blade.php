@@ -31,7 +31,7 @@
         <div class="text-gray-100 text-xl">
             <div class="p-2.5 mt-1 bg-bg-green-800 flex items-center">
                 <h1 class="font-bold text-gray-200 text-[35px] ml-3">
-                    <img src="images/Logo-White.png" alt="Test Image" class=" object-center h-48"/>
+                    <img src="/public/images/Logo-White.png" alt="Test Image" class=" object-center h-48"/>
                 </h1>
                 <i
                     class="bi bi-x cursor-pointer ml-28 lg:hidden"
@@ -58,7 +58,7 @@
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bx-group' ></i>
-            <a href="/over-ons" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Over ons</a>
+            <a href="/manager" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Manager</a>
         </div>
             @role('user')
             @endrole

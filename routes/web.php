@@ -1,25 +1,13 @@
 <?php
-
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PizzaController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\FoodCartController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-use App\Http\Controllers\OrderController;
 
-Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
-Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
-Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
-
+// Other existing routes...
 /*Route::get('/', function () {
     return view('Pizza/Home');
 });*/
@@ -29,44 +17,68 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-//Home page
+
+// Home page
 Route::get('/home', function () {
     return view('/Pizza/home');
 });
-//Menu page
-Route::get('/menu', function () {
+
+// Menu page
+/*Route::get('/menu', function () {
     return view('/Pizza/menu');
+});// Menu page*/
+Route::get('/manager', function () {
+    return view('/Pizza/manager');
 });
-//Over ons page
+
+Route::get('/Pizza/manager', [FoodCartController::class, 'update'])->name('manager');
+// Add this route to your web.php file or routes file
+Route::put('/Pizza/store', [FoodCartController::class, 'store'])->name('foodcard.store');
+/*Route::put('/Pizza/update', [FoodCartController::class, 'update'])->name('foodcard.update');*/
+Route::put('/Pizza/create', [FoodCartController::class, 'create'])->name('foodcard.create');
+
+Route::get('/menu', function () {
+    return redirect('/Pizza/menu');
+});
+
+
+// Over ons page
 Route::get('/over-ons', function () {
     return view('/Pizza/over-ons');
 });
-//Over ons page
+
+// Cart page
 Route::get('/cart', function () {
     return view('/Pizza/cart');
 });
-// Questionnaire routes
-Route::middleware('auth', 'role:user')->group(
-    function () {
-    }
-);
-
-Route::middleware('auth', 'role:user|manager')->group(
-    function () {
-
-    }
-);
-
-Route::middleware('auth', 'role:manager')->group(
-    function () {
-    }
-);
 
 // Contact page
 Route::get('/contact', function () {
     return view('/Pizza/contact');
 });
+//FoodCart
 
+// OrderController
+Route::get('/cart/{id}/edit', [OrderController::class, 'edit'])->name('cart.edit');
+Route::post('/orders/create', [OrderController::class, 'create'])->name('orders.create');
+Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
+Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
+Route::put('/orders/{order}', [OrderController::class, 'update'])->name('orders.update');
+
+// PizzaController
+// ... (other routes)
+
+Route::get('/menu', [PizzaController::class, 'index'])->name('menu');
+Route::post('/add-to-cart', [PizzaController::class, 'addToCart'])->name('add.to.cart');
+Route::get('/cart', [PizzaController::class, 'showCart'])->name('show.cart');
+Route::post('/Pizza/create', [FoodCartController::class, 'create'])->name('foodcard.create');
+Route::get('/menu', [FoodCartController::class, 'showMenu'])->name('menu');
+
+// ... (other routes)
+
+
+//ProfileController
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -74,3 +86,5 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+/*// In your routes file
+Route::post('/upload-image', 'YourController@uploadImage')->name('upload.image');*/

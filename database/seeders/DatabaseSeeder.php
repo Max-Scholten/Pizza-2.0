@@ -10,6 +10,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(UnitsSeeder::class);
+        $this->call(MenuSeeder::class);
         $this->call(StatusSeeder::class);
         $this->call(MaatSeeder::class);
         $this->call(IngredientenSeeder::class);
