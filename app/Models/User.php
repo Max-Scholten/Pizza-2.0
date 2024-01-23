@@ -13,7 +13,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
-
+    public function menu()
+    {
+        return $this->hasMany(Menu::class);
+    }
     protected $fillable = [
         'naam',
         'straat',

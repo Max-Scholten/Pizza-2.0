@@ -60,6 +60,7 @@
             <i class='bx bx-group' ></i>
             <a href="/manager" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Manager</a>
         </div>
+
             @role('user')
             @endrole
 

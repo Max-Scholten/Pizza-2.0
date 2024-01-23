@@ -10,5 +10,8 @@ class Ingredient extends Model
 use HasFactory;
 
     protected $fillable = ['topping', 'price','unit_id'];
-
+    public function menu()
+    {
+        return $this->belongsToMany(Menu::class);
+    }
 }

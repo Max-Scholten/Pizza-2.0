@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\OrderController;
@@ -36,6 +37,14 @@ Route::get('/Pizza/manager', [FoodCartController::class, 'update'])->name('manag
 Route::put('/Pizza/store', [FoodCartController::class, 'store'])->name('foodcard.store');
 /*Route::put('/Pizza/update', [FoodCartController::class, 'update'])->name('foodcard.update');*/
 Route::put('/Pizza/create', [FoodCartController::class, 'create'])->name('foodcard.create');
+// Add these routes to your web.php file
+// Route for editing a pizza
+Route::get('/Pizza/{id}/edit', [FoodCartController::class, 'edit'])->name('Pizza.manager');
+
+// Route for updating a pizza
+Route::put('/Pizza/{id}/update', [FoodCartController::class, 'update'])->name('pizza.update');
+Route::put('/Pizza/{id}/update', [FoodCartController::class, 'update'])->name('foodcart.update');
+
 
 Route::get('/menu', function () {
     return redirect('/Pizza/menu');
@@ -84,6 +93,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+// web.php
+
+
+
+Route::get('/menu', [MenuController::class, 'showMenu'])->name('menu');
+Route::get('/cart', [CartController::class, 'showCart'])->name('cart');
+Route::get('/add-to-cart/{id}', [CartController::class, 'addToCart'])->name('cart.add');
+Route::post('/place-order', [CartController::class, 'placeOrder'])->name('order.place');
 
 require __DIR__.'/auth.php';
 /*// In your routes file

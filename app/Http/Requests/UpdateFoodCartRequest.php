@@ -18,7 +18,10 @@ class UpdateFoodCartRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'soort' => 'required|string|max:255',
+            'beschrijving' => 'required|string',
+            'foodcart' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // adjust based on your needs
+            // Add other rules as needed
         ];
     }
 }

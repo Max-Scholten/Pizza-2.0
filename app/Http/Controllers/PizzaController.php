@@ -7,41 +7,37 @@ use Illuminate\Http\Request;
 class PizzaController extends Controller
 {
 // Other actions...
-public function index()
-{
-    $pizzas = Order::all(); // Assuming you have a Pizza model
+    // PizzaController.php
 
-    return view('menu', compact('pizzas'));
-}
-public function showMenu()
-{
-    $pizzas = Order::all(); // Assuming you have a Pizza model
+// Add this method to handle editing a pizza
+    public function edit($id)
+    {
+        $pizza = Pizza::findOrFail($id);
+        return view('Pizza.edit', compact('pizza'));
+    }
 
-    return view('Pizza/menu', compact('pizzas'));
-}
-public function addToCart(Request $request)
-{
-$pizzaId = $request->input('pizza_id');
-$size = $request->input('size') ;
+// Add this method to handle updating a pizza
+    public function update(Request $request, $id)
+    {
+        $pizza = Pizza::findOrFail($id);
+        // Validate the input data
+        $request->validate([
+            'naam' => 'required',
+            'beschrijving' => 'required',
+            'prijs' => 'required|numeric',
+            // Add other validation rules as needed
+        ]);
 
-// Retrieve the selected pizza from the database (assuming you have a Pizza model)
-$pizza = Order::find($pizzaId);
+        // Update pizza details
+        $pizza->update([
+            'naam' => $request->input('naam'),
+            'beschrijving' => $request->input('beschrijving'),
+            'prijs' => $request->input('prijs'),
+            // Update other fields as needed
+        ]);
 
-// Add the selected pizza to the user's cart (you might use a cart service or a session)
-$cart = session('cart', []);
-$cart[] = [
-'pizza' => $pizza,
-'size' => $size,
-];
-session(['cart' => $cart]);
+        // Redirect back to the menu or wherever appropriate
+        return redirect()->route('menu')->with('success', 'Pizza updated successfully');
+    }
 
-return redirect()->route('menu')->with('success', 'Pizza added to cart!');
-}
-
-public function showCart()
-{
-$cart = session('cart', []);
-
-return view('Pizza/cart', compact('cart'));
-}
 }
