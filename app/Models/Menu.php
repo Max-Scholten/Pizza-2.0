@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -8,11 +9,14 @@ class Menu extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['naam', 'beschrijving', 'afbeelding', 'user_id'];
+    protected $fillable = ['naam', 'beschrijving', 'prijs', 'afbeelding', 'user_id'];
 
-// Define the relationship with Ingredient
-    public function Ingredient()
+    // Define the many-to-many relationship with Ingredient (plural
+
+
+    // Define the reverse relationship with User
+    public function user()
     {
-        return $this->belongsToMany(Ingredient::class);
+        return $this->belongsTo(User::class);
     }
 }

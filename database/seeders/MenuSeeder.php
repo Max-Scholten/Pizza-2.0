@@ -30,7 +30,7 @@ class MenuSeeder extends Seeder
             Menu::create([
                 'naam' => $menuName,
                 'beschrijving' => $beschrijving,
-                // No need to include 'afbeelding' here if it's not available in $menu  Data
+                // No need to include 'afbeelding' here if it's not available in $Menus  Data
             ]);
         }
 

@@ -10,32 +10,41 @@
     </div>
 
     <div class='flex items-center justify-center min-h-screen from-[#F9F5F3] via-[#F9F5F3] to-[#F9F5F3] bg-gradient-to-br px-2'>
-        <form action="{{ route('foodcard.create') }}" method="post" enctype="multipart/form-data" id="uploadForm">
+
+
+        <form action="{{ route('foodcard.store') }}" method="post" enctype="multipart/form-data" id="uploadForm">
             @csrf
-            @method('POST')
+
             <div class='w-full max-w-md mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
                 <div class='max-w-md mx-auto'>
                     <div class='h-[236px]'></div>
                     <div id="preview" class='h-[236px]' style='background-size: cover; background-position: center'></div>
                     <label for="foodcart">Upload Food Card Image:</label>
                     <input type="file" name="foodcart" accept="image/*" id="imageInput">
+
+
                     <div class='p-4 sm:p-6'>
                         <div class="font-bold text-gray-700 text-[22px] leading-7 mb-1">
-                            <label for="soort" class="block text-sm font-medium text-black">Soort</label>
-                            <input type="text" id="soort" name="soort" class="form-input">
+                            <label for="naam" class="block text-sm font-medium text-black">Soort</label>
+                            <input type="text" id="naam" name="naam" class="form-input">
                         </div>
+
                         <div class="text-[#7C7C80] font-[15px] mt-6">
                             <label for="beschrijving" class="block text-sm font-medium text-black">Beschrijving</label>
                             <input type="text" id="beschrijving" name="beschrijving" class="form-input">
                         </div>
 
+                        <div class="text-[#7C7C80] font-[15px] mt-6">
+                            <label for="prijs" class="block text-sm font-medium text-black">Prijs</label>
+                            <input type="text" id="prijs" name="prijs" class="form-input" >
+                        </div>
 
                         <button type="submit">Submit</button>
                     </div>
                 </div>
             </div>
-        </form>
 
+        </form>
         <script>
             document.getElementById('imageInput').addEventListener('change', function (e) {
                 const preview = document.getElementById('preview');

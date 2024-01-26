@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,9 +10,9 @@ class Status extends Model
 
     protected $fillable = ['status'];
 
-    // Define reverse relationship
-/*    public function orders()
+    // Define the reverse relationship with Order
+    public function orders()
     {
         return $this->hasMany(Order::class, 'status_id');
-    }*/
+    }
 }

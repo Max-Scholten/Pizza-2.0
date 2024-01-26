@@ -26,7 +26,7 @@ class UnitsSeeder extends Seeder
             $unitName = $maatData[0];
 
             Units::create([
-                'unit' => $unitName,
+                'units' => $unitName,
             ]);
         }
     }

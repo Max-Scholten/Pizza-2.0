@@ -62,7 +62,7 @@ class UserSeeder extends Seeder
             'password' => '$2y$12$vh6cNGFIKG67LHa0WTOSjevIpyv.QLF2Y3bvHrrhfvPfuYk1p8VFS', // password: .1LnJP)4I,Y-04(u
         ])->assignRole('customer','employee','manager','finance-worker');
 
-        // Manager account
+        // ingredients account
         User::create([
             'naam' => 'manager',
             'straat' => '',

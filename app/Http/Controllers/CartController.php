@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart; // Import the Cart facade
-use App\Models\Menu; // Import the Menu model
+use App\Models\Menu; // Import the Menus model
 
 class CartController extends Controller
 {
@@ -27,7 +27,7 @@ class CartController extends Controller
             'qty' => 1,
         ]);
 
-        return redirect()->route('menu')->with('success', 'Item added to cart.');
+        return redirect()->route('Menus')->with('success', 'Item added to cart.');
     }
 
 
@@ -40,6 +40,6 @@ class CartController extends Controller
         // Clear the cart after placing the order
         Cart::clear();
 
-        return redirect()->route('menu')->with('success', 'Order placed successfully.');
+        return redirect()->route('Menus')->with('success', 'Order placed successfully.');
     }
 }

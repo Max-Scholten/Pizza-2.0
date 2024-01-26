@@ -12,7 +12,7 @@ use App\Http\Controllers\IngredientController;
 
 // Other existing routes...
 Route::get('/', function () {
-    return view('Pizza/Home');
+    return view('Pizza/home');
 });
 /*Route::get('/', function () {
     return view('welcome');
@@ -21,18 +21,15 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Home page
-Route::get('/home', function () {
-    return view('/Pizza/home');
-});
 
 // Menu page
 /*Route::get('/menu', function () {
     return view('/Pizza/menu');
 });// Menu page*/
 Route::get('/manager', function () {
-    return view('/Pizza/manager');
+    return view('/Menus/manager');
 });
+
 
 Route::get('/index', function () {
     return view('/ingredients/index');
@@ -45,11 +42,13 @@ Route::get('/create', function () {
 Route::get('/edit', function () {
     return view('/ingredients/edit');
 });
+Route::get('/menu', function () {
+    return view('/Pizza/menu');
+});
 
-Route::get('/Pizza/manager', [FoodCartController::class, 'update'])->name('manager');
-// Add this route to your web.php file or routes file
-Route::put('/Pizza/store', [FoodCartController::class, 'store'])->name('foodcard.store');
-/*Route::put('/Pizza/update', [FoodCartController::class, 'update'])->name('foodcard.update');*/
+
+Route::get('/Menus/manager', [FoodCartController::class, 'update'])->name('manager');
+Route::post('/Menus', [FoodCartController::class, 'store'])->name('foodcard.store');
 Route::put('/Pizza/create', [FoodCartController::class, 'create'])->name('foodcard.create');
 // Add these routes to your web.php file
 // Route for editing a pizza
@@ -81,6 +80,30 @@ Route::get('/contact', function () {
 });
 
 // routes/web.php
+
+// ...
+
+// Route to display the menu
+Route::get('/Pizza/menu', [OrderController::class, 'showmenu'])->name('pizza.menu');
+// Route to edit a pizza
+Route::get('/Pizza/edit/{id}', [FoodCartController::class, 'edit'])->name('pizza.edit');
+// Route to update a pizza
+Route::put('/Pizza/update/{id}', [FoodCartController::class, 'update'])->name('pizza.update');
+// Route to create a new pizza (display the form)
+Route::get('/Pizza/create', [FoodCartController::class, 'create'])->name('pizza.create');
+// Route to store a new pizza
+Route::post('/Menus/store', [FoodCartController::class, 'store'])->name('pizza.store');
+Route::delete('/menu/{id}', [FoodCartController::class, 'destroy'])->name('menu.destroy');
+
+
+
+
+
+
+
+
+
+
 
 
 // Update your routes/web.php file
@@ -116,12 +139,12 @@ Route::get('/ingredients', [IngredientController::class, 'index'])->name('ingred
 
 
 // OrderController
-Route::get('/cart/{id}/edit', [OrderController::class, 'edit'])->name('cart.edit');
-Route::post('/orders/create', [FoodCartController::class, 'create'])->name('orders.create');
-Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
-Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
-Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
-Route::put('/orders/{order}', [OrderController::class, 'update'])->name('orders.update');
+//Route::get('/cart/{id}/edit', [OrderController::class, 'edit'])->name('cart.edit');
+//Route::post('/orders/create', [FoodCartController::class, 'create'])->name('orders.create');
+//Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+//Route::get('/Pizza/{menu}', [OrderController::class, 'show'])->name('orders.show');
+//Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
+//Route::put('/orders/{order}', [OrderController::class, 'update'])->name('orders.update');
 
 // PizzaController
 // ... (other routes)
@@ -156,5 +179,3 @@ Route::middleware('auth')->group(function () {
 
 
 require __DIR__.'/auth.php';
-/*// In your routes file
-Route::post('/upload-image', 'YourController@uploadImage')->name('upload.image');*/

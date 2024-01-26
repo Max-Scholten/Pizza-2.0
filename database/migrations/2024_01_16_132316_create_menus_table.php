@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('naam')->nullable();
             $table->text('beschrijving')->nullable();
+            $table->decimal('prijs')->nullable();
             $table->string('afbeelding')->nullable();
             $table->timestamps();
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-//        Schema::dropIfExists('menus');
+        Schema::dropIfExists('menus');
     }
 };
