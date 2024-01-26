@@ -1,0 +1,19 @@
+<!-- resources/views/units/create.blade.php -->
+
+<x-nav-layout xmlns:X-slot="http://www.w3.org/1999/xlink">
+    <x-slot:title>
+        Create Unit
+    </x-slot:title>
+    <div>
+        <div class="text-3xl object-center">
+            <h1>Create Unit</h1>
+            <br>
+        </div>
+        <form method="POST" action="{{ route('units.store') }}">
+            @csrf
+            <label for="units">Unit:</label>
+            <input type="text" id="units" name="units" required>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+</x-nav-layout>

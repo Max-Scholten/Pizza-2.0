@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Cart; // Import the Cart facade
+use Gloudemans\Shoppingcart\Facades\Cart; // Import the Cart facade
 use App\Models\Menu; // Import the Menu model
 
 class CartController extends Controller
 {
     public function showCart()
     {
-        $cartItems = Cart::getContent();
+        // Use the facade to retrieve the content
+        $cartItems = Cart::content();
 
-        return view('Pizza.cart', compact('cartItems')); // Assuming your view is in the "Pizza" directory
+        return view('Pizza.cart', compact('cartItems'));
     }
 
     public function addToCart($id)
@@ -23,11 +24,13 @@ class CartController extends Controller
             'id' => $menu->id,
             'name' => $menu->naam,
             'price' => $menu->prijs,
-            'quantity' => 1,
+            'qty' => 1,
         ]);
 
         return redirect()->route('menu')->with('success', 'Item added to cart.');
     }
+
+
 
     public function placeOrder(Request $request)
     {
