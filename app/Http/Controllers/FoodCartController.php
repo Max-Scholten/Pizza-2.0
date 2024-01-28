@@ -109,4 +109,12 @@ class FoodCartController extends Controller
         // Redirect or return a response as needed
         return redirect()->route('Menus')->with('success', 'Menus item created successfully');
     }
+    public function destroy($id)
+    {
+        // Find the Menus item by ID and delete it
+        $menu = Menu::findOrFail($id);
+        $menu->delete();
+
+        return redirect()->route('manager')->with('success', 'Menus item deleted successfully');
+    }
 }

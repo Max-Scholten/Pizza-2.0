@@ -6,12 +6,12 @@
         <div class="text-3xl object-center">
             <h1>Stonks-Pizza menu</h1>
             <br>
-            <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 min-h-screen from-[#F9F5F3] via-[#F9F5F3] to-[#F9F5F3] bg-gradient-to-br px-2'>
+            <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 min-h-screen from-[#F9F5F3] via-[#F9F5F3] to-[#F9F5F3] bg-gradient-to-br px-2 rounded-2xl'>
                 @foreach($pizzas as $pizza)
 
-                    <div class='w-full mb-4 h-full'>
-                        <div class='bg-white rounded-3xl shadow-xl overflow-hidden h-full'>
-                            <div class='h-[180px] md:h-[236px]'>
+                    <div class='w-full mb-4 p-8  h-full '>
+                        <div class='bg-white  rounded-3xl shadow-xl overflow-hidden h-fit'>
+                            <div class=' md:h-fit'>
                                 <img class="w-full h-full object-cover" src="{{ asset("storage$pizza->afbeelding") }}" alt="Foto Pizza">
                             </div>
 
@@ -35,7 +35,6 @@
                                             @endforeach
                                         </select>
                                     </label>
-
                                     <!-- Ingredient Checkboxes -->
                                     <div class="mt-4 max-h-40 overflow-y-auto">
                                         <label class="block text-sm font-medium text-black">Select Ingredient:</label>
@@ -48,7 +47,6 @@
                                             </div>
                                         @endforeach
                                     </div>
-
                                     <!-- Order Button -->
                                     <button type="submit" class="bg-[#FFC933] text-white px-4 py-2 rounded-lg mt-4 hover:bg-[#FFC933DD] focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80">
                                         Place Order

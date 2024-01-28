@@ -8,6 +8,7 @@
         <div class="text-3xl object-center">
             <h1>Ingredients List</h1>
             <br>
+            <a href="{{ route('ingredients.create') }}">Create New Ingredients</a>
         </div>
         <table>
             <thead>
