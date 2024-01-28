@@ -8,10 +8,11 @@
         <title>{{ $title }}</title>
         @vite('resources/css/app.css')
         <script src="script.js" defer></script>
+
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
-
     <header class="bg-green-800 h-16 flex justify-end items-center fixed top-0 right-0 z-20 w-full">
         <div class="bg-green-800 flex items-center cursor-pointer text-white p-5">
             <i class="bi bi-house-door-fill"></i>
@@ -24,6 +25,7 @@
     <main class="ml-[300px] p-4 mt-14">
         {{ $slot }}
     </main>
+
 
     <div class="z-40 sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-green-800">
         <div class="text-gray-100 text-xl">
@@ -41,7 +43,7 @@
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bxs-home'></i>
-            <a href="/" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Home</a>
+            <a href="/home" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Home</a>
         </div>
         <br>
         <br>
@@ -49,16 +51,10 @@
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bx-food-menu' ></i>
             <a href="/menu" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Menu</a>
-        </div>
-        <br>
-        <br>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
-            <i class="bi bi-house-door-fill"></i>
-            <i class='bx bx-food-menu' ></i>
-            <a href="/overons" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Overons</a>
-        </div>
 
-        @role('manager')
+        </div>
+        <br>
+        <br>
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bx-group' ></i>
@@ -77,7 +73,9 @@
         @endrole
 
         <div class="my-4 bg-gray-600 h-[1px]"></div>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white fixed bottom-0">
+        <div
+            class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white fixed bottom-0"
+        >
             <i class="bi bi-box-arrow-in-right"></i>
             <i class='bx bx-user' ></i>
             <a href="/profile" class="text-[15px] ml-4 hover:bg-green-800 font-bold" >Account</a>
