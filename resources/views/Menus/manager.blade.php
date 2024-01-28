@@ -1,6 +1,6 @@
 <x-nav-layout xmlns:X-slot="http://www.w3.org/1999/xlink">
     <x-slot:title>
-        Managerr
+        Managerrr
     </x-slot:title>
     <div>
         <div class="text-3xl object-center">
