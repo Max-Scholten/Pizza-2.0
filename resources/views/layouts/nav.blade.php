@@ -43,7 +43,7 @@
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bxs-home'></i>
-            <a href="/home" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Home</a>
+            <a href="/" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Home</a>
         </div>
         <br>
         <br>
@@ -55,6 +55,7 @@
         </div>
         <br>
         <br>
+        @role('manager')
         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
             <i class="bi bi-house-door-fill"></i>
             <i class='bx bx-group' ></i>
