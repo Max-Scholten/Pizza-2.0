@@ -24,11 +24,12 @@
                                         <p class='text-[15px] font-bold text-[#0FB478]'>{{ $pizza->prijs }}</p>
                                     </div>
                                     <!-- Pizza Size Description -->
-                                    <div class="max-h-25 overflow-x-hidden">
-                                        <p class='text-[#7C7C80] font-[13px] mt-4' style="overflow-wrap: break-word;">
+                                    <div class="overflow-y-auto max-h-28">
+                                        <p class="text-[#7C7C80] font-[13px] mt-4" style="overflow-wrap: break-word;">
                                             {{ $pizza->beschrijving }}
                                         </p>
                                     </div>
+
 
                                     <!-- Pizza Size Dropdown -->
                                     <label class="block text-sm font-medium text-black mt-4">Select Pizza Size:

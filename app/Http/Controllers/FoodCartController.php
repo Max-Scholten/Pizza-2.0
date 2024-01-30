@@ -14,16 +14,11 @@ class FoodCartController extends Controller
         return view('Pizza.menu', compact('pizzas'));
     }
 
-    // FoodCartController.php
-
     public function edit($id)
     {
         $pizza = Menu::findOrFail($id);
         return view('Menus.edit', compact('pizza'));
     }
-
-
-    // FoodCartController.php
 
     public function update(UpdateFoodCartRequest $request, $id)
     {
@@ -46,8 +41,6 @@ class FoodCartController extends Controller
         // Redirect back to the Menus or wherever appropriate
         return redirect()->route('manager')->with('success', 'Food Card updated successfully');
     }
-
-
 
     public function store(Request $request)
     {
@@ -82,7 +75,6 @@ class FoodCartController extends Controller
         // Redirect or return a response as needed
         return redirect()->route('manager')->with('success', 'Food card created successfully.');
     }
-
 
     public function create(UpdateFoodCartRequest $request)
     {
