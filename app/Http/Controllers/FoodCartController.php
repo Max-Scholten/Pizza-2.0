@@ -14,15 +14,19 @@ class FoodCartController extends Controller
         return view('Pizza.menu', compact('pizzas'));
     }
 
+    // FoodCartController.php
+
     public function edit($id)
     {
         $pizza = Menu::findOrFail($id);
-        return view('Pizza.edit', compact('pizza'));
+        return view('Menus.edit', compact('pizza'));
     }
+
+
+    // FoodCartController.php
 
     public function update(UpdateFoodCartRequest $request, $id)
     {
-        // Find the Menus item by ID
         $menu = Menu::findOrFail($id);
 
         // Validate the input data
@@ -40,8 +44,9 @@ class FoodCartController extends Controller
         ]);
 
         // Redirect back to the Menus or wherever appropriate
-        return redirect()->route('Menus')->with('success', 'Menus item updated successfully');
+        return redirect()->route('manager')->with('success', 'Food Card updated successfully');
     }
+
 
 
     public function store(Request $request)

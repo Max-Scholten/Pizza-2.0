@@ -14,73 +14,86 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <header class="bg-green-800 h-16 flex justify-end items-center fixed top-0 right-0 z-20 w-full">
-        <div class="bg-green-800 flex items-center cursor-pointer text-white p-5">
-            <i class="bi bi-house-door-fill"></i>
-            <box-icon name='cart'></box-icon>
-            <i class='bx bx-cart'></i>
-            <a href="/cart" class="text-[15px] h-6  ml-2 text-gray-200 font-bold">Shopping cart</a>
-        </div>
+        <a href="/cart" class="block bg-green-800 flex-items-center cursor-pointer text-white p-5">
+            <div class="flex items-center px-4">
+                <i class="bi bi-house-door-fill"></i>
+                <i class='bx bx-cart'></i>
+                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Shopping cart</span>
+            </div>
+        </a>
     </header>
     <body class=bg-white>
     <main class="ml-[300px] p-4 mt-14">
         {{ $slot }}
     </main>
 
-
     <div class="z-40 sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-green-800">
         <div class="text-gray-100 text-xl">
             <div class="p-2.5 mt-1 bg-bg-green-800 flex items-center">
                 <h1 class="font-bold text-gray-200 text-[35px] ml-3">
-                    <img src="/public/images/Logo-White.png" alt="Test Image" class=" object-center h-48"/>
-                </h1>
-                <i
-                    class="bi bi-x cursor-pointer ml-28 lg:hidden"
-                ></i>
+                    <img src="/images/Logo-White.png" alt="Test Image" class=" object-center h-48"/>
+                </h1><i class="bi bi-x cursor-pointer ml-28 lg:hidden"></i>
             </div>
             <div class="my-2 bg-gray-600 h-[1px]"></div>
         </div>
-
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
-            <i class="bi bi-house-door-fill"></i>
-            <i class='bx bxs-home'></i>
-            <a href="/" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Home</a>
-        </div>
+        <a href="/" class="block p-2.5 mt-3 rounded-md cursor-pointer hover:bg-Forestgreen text-white">
+            <div class="flex items-center px-4">
+                <i class="bi bi-house-door-fill"></i>
+                <i class='bx bxs-home'></i>
+                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Home</span>
+            </div>
+        </a>
         <br>
+        <a href="/menu" class="block p-2.5 mt-3 rounded-md cursor-pointer hover:bg-Forestgreen text-white">
+            <div class="flex items-center px-4">
+                <i class="bi bi-house-door-fill"></i>
+                <i class='bx bx-food-menu'></i>
+                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Menu</span>
+            </div>
+        </a>
         <br>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
-            <i class="bi bi-house-door-fill"></i>
-            <i class='bx bx-food-menu' ></i>
-            <a href="/menu" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Menu</a>
-
-        </div>
+        <a href="/over-ons" class="block p-2.5 mt-3 rounded-md cursor-pointer hover:bg-Forestgreen text-white">
+            <div class="flex items-center px-4">
+                <i class="bi bi-house-door-fill"></i>
+                <i class='bx bx-food-menu'></i>
+                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Over Ons</span>
+            </div>
+        </a>
         <br>
+        @role('employee')
+        <a href="/manager" class="block p-2.5 mt-3 rounded-md cursor-pointer hover:bg-Forestgreen text-white">
+            <div class="flex items-center px-4">
+                <i class="bi bi-house-door-fill"></i>
+                <i class='bx bx-group'></i>
+                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Manager</span>
+            </div>
+        </a>
         <br>
-        @role('manager')
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
-            <i class="bi bi-house-door-fill"></i>
-            <i class='bx bx-group' ></i>
-            <a href="/manager" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Manager</a>
-        </div>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
-            <i class="bi bi-house-door-fill"></i>
-            <i class='bx bx-group' ></i>
-            <a href="/ingredients/index" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Ingredienten</a>
-        </div>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 cursor-pointer hover:bg-Forestgreen text-white">
-            <i class="bi bi-house-door-fill"></i>
-            <i class='bx bx-group' ></i>
-            <a href="/units/index" class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Units</a>
-        </div>
+        <a href="/ingredients/index" class="block p-2.5 mt-3 rounded-md cursor-pointer hover:bg-Forestgreen text-white">
+            <div class="flex items-center px-4">
+                <i class="bi bi-house-door-fill"></i>
+                <i class='bx bx-group'></i>
+                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Ingredienten</span>
+            </div>
+        </a>
+        <br>
+        <a href="/units/index" class="block p-2.5 mt-3 rounded-md cursor-pointer hover:bg-Forestgreen text-white">
+            <div class="flex items-center px-4">
+                <i class="bi bi-house-door-fill"></i>
+                <i class='bx bx-group'></i>
+                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Units</span>
+            </div>
+        </a>
         @endrole
 
-        <div class="my-4 bg-gray-600 h-[1px]"></div>
-        <div
-            class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-Forestgreen text-white fixed bottom-0"
-        >
-            <i class="bi bi-box-arrow-in-right"></i>
-            <i class='bx bx-user' ></i>
-            <a href="/profile" class="text-[15px] ml-4 hover:bg-green-800 font-bold" >Account</a>
-        </div>
+        <a href="/profile" class="block p-2.5 mt-3 rounded-md duration-300 cursor-pointer hover:bg-Forestgreen text-white fixed bottom-0">
+            <div class="flex items-center px-4">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <i class='bx bx-user'></i>
+                <span class="text-[15px] ml-4 hover:bg-green-800 font-bold">Account</span>
+            </div>
+        </a>
+
 
     </div>
 <br>
@@ -92,7 +105,7 @@
             <a class="md:self-start items-center" href="#">
                 <div class="flex justify-center items-center mb-8 md:my-0  ">
                     <div class="flex justify-center ">
-                        <span class=" pt-1 mx-3 whitespace-nowrap text-4xl italic font-light text-red-700 hover:text-gray-900">AisModa.</span>
+
                     </div>
                 </div>
             </a>

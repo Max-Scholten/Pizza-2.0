@@ -97,7 +97,13 @@ Route::delete('/menu/{id}', [FoodCartController::class, 'destroy'])->name('menu.
 
 
 
+// web.php
 
+
+
+// ...
+
+Route::get('/menu/{id}/edit', [FoodCartController::class, 'edit'])->name('menu.edit');
 
 
 
