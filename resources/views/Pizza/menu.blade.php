@@ -29,8 +29,7 @@
                                             {{ $pizza->beschrijving }}
                                         </p>
                                     </div>
-
-
+                                    
                                     <!-- Pizza Size Dropdown -->
                                     <label class="block text-sm font-medium text-black mt-4">Select Pizza Size:
                                         <select name="pizza_size" class="form-input">
