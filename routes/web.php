@@ -63,6 +63,12 @@ Route::get('/menu', function () {
     return redirect('/Pizza/menu');
 });
 
+
+// Over ons page
+Route::get('/over-ons', function () {
+    return view('/Pizza/over-ons');
+});
+
 // Cart page
 Route::get('/cart', function () {
     return view('/Pizza/cart');
@@ -89,17 +95,7 @@ Route::get('/Pizza/create', [FoodCartController::class, 'create'])->name('pizza.
 Route::post('/Menus/store', [FoodCartController::class, 'store'])->name('pizza.store');
 Route::delete('/menu/{id}', [FoodCartController::class, 'destroy'])->name('menu.destroy');
 
-// Route to display the menu
-Route::get('/Pizza/cart', [OrderController::class, 'showmenu'])->name('pizza.menu');
-// Route to edit a pizza
-Route::get('/Pizza/edit/{id}', [FoodCartController::class, 'edit'])->name('pizza.edit');
-// Route to update a pizza
-Route::put('/Pizza/update/{id}', [FoodCartController::class, 'update'])->name('pizza.update');
-// Route to create a new pizza (display the form)
-Route::get('/Pizza/create', [FoodCartController::class, 'create'])->name('pizza.create');
-// Route to store a new pizza
-Route::post('/Menus/store', [FoodCartController::class, 'store'])->name('pizza.store');
-Route::delete('/menu/{id}', [FoodCartController::class, 'destroy'])->name('menu.destroy');
+
 
 // web.php
 
@@ -144,6 +140,26 @@ Route::put('/ingredients/{id}', [IngredientController::class, 'update'])->name('
 // routes/web.php
 
 Route::get('/ingredients', [IngredientController::class, 'index'])->name('ingredients.index');
+
+
+
+
+// OrderController
+//Route::get('/cart/{id}/edit', [OrderController::class, 'edit'])->name('cart.edit');
+//Route::post('/orders/create', [FoodCartController::class, 'create'])->name('orders.create');
+//Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+//Route::get('/Pizza/{menu}', [OrderController::class, 'show'])->name('orders.show');
+//Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
+//Route::put('/orders/{order}', [OrderController::class, 'update'])->name('orders.update');
+
+// PizzaController
+// ... (other routes)
+
+//Route::get('/menu', [PizzaController::class, 'index'])->name('menu');
+//Route::post('/add-to-cart', [PizzaController::class, 'addToCart'])->name('add.to.cart');
+//Route::get('/cart', [PizzaController::class, 'showCart'])->name('show.cart');
+//Route::post('/Pizza/create', [FoodCartController::class, 'create'])->name('foodcard.create');
+//Route::get('/menu', [FoodCartController::class, 'showMenu'])->name('menu');
 
 // ... (other routes)
 
