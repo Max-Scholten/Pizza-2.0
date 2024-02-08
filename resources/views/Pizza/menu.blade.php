@@ -17,8 +17,11 @@
                                      alt="Foto Pizza">
                             </div>
                             <div class='p-4 sm:p-6'>
-                                <form method="post" action="{{ route('pizza.create') }}">
+                                <form method="post" action="{{ route('cart.placeOrder')}}">
                                     @csrf
+                                    <!-- Add hidden input fields to pass necessary data -->
+                                    <input type="hidden" name="prijs" value="{{ $pizza->prijs }}">
+                                    <input type="hidden" name="menu_id" value="{{ $pizza->id }}">
                                     <p class='font-bold text-gray-700 text-[18px] leading-6 mb-1'>{{ $pizza->naam }}</p>
                                     <div class='flex flex-row'>
                                         <p class='text-[15px] font-bold text-[#0FB478]'>€{{ $pizza->prijs }}</p>

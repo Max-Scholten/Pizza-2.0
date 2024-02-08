@@ -10,10 +10,11 @@
             <br>
         </div>
         <form method="POST" action="{{ route('units.update', $unit->id) }}">
-            @csrf
+
+        @csrf
             @method('PUT')
-            <label for="unit">Unit:</label>
-            <input type="text" id="unit" name="unit" value="{{ $unit->units }}" required>
+            <label for="units">Unit:</label>
+            <input type="text" id="units" name="units" value="{{ $unit->units }}" required>
             <button type="submit">Update</button>
         </form>
     </div>
