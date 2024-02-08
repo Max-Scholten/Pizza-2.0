@@ -127,8 +127,7 @@ Route::post('/place-order', [CartController::class, 'placeOrder'])->name('place.
 Route::post('/Pizza', [CartController::class, 'store'])->name('pizza.store');
 
 
-
-
+Route::delete('/cart/{orderId}', [CartController::class, 'deleteOrder'])->name('cart.delete');
 Route::post('/place-order', [CartController::class, 'placeOrder'])->name('cart.placeOrder');
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 

@@ -24,20 +24,37 @@
                 <div class="ml-4 bg">
                     <!-- Pizza Name -->
                     <p class='font-bold text-gray-700 text-[18px] leading-6 mb-1'>{{ $cart->menu->naam }}</p><br>
-                    <!-- Pizza Price -->
-                    <div class='flex flex-row'>
-                        <p class='text-[15px] font-bold text-[#0FB478]'>€{{ $cart->menu->prijs }}</p><br>
-                    </div>
+                    <!-- Pizza Size -->
+                    <p class='font-bold text-gray-700 text-[18px] leading-6 mb-1'>Size: {{ $cart->grote }}</p><br>
+                    <!-- Pizza Ingredients -->
+                    <p class='font-bold text-gray-700 text-[18px] leading-6 mb-1'> Extra Ingredients: {{ ($cart->ingredients) }}</p>
+                    <!-- Pizza Status bestelling -->
+                    <p class="font-bold text-gray-700 text-[18px] leading-6 mb-1">Status: {{ $cart->status->status }}</p>
+
+
                     <!-- Pizza Description -->
-                    <div class="overflow-y-auto max-h-28 ">
+                    <div class="overflow-y-auto  ">
                         <p class="text-[#7C7C80] text-[30px] font-serif mt-16" style="overflow-wrap: break-word;">
                             {{ $cart->menu->beschrijving }}
                         </p>
                     </div>
+                    <!-- Pizza Price -->
+                    <div class='flex flex-row'>
+                        <p class='text-[15px] font-bold text-[#0FB478]'>€{{ $cart->prijs }}</p><br>
+                    </div>
+
+                    <form method="post" action="{{ route('cart.delete', ['orderId' => $cart->id]) }}" class="mt-6">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-80">
+                            Delete Order
+                        </button>
+                    </form>
                 </div>
             </div>
+
             @php
-                $totalPrice += $cart->menu->prijs ; // Accumulate the price of each cart item
+                $totalPrice += $cart->prijs ; // Accumulate the price of each cart item
             @endphp
         @endforeach
 

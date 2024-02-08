@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('prijs');
+            $table->string('grote')->nullable();
+            $table->string('ingredients')->nullable();
             $table->timestamps();
 
         });
