@@ -18,7 +18,7 @@
             <div class="flex items-center px-4">
                 <i class="bi bi-house-door-fill"></i>
                 <i class='bx bx-cart'></i>
-                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Shopping cart</span>
+                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Winkel wagen</span>
             </div>
         </a>
     </header>
@@ -73,7 +73,7 @@
             <div class="flex items-center px-4">
                 <i class="bi bi-house-door-fill"></i>
                 <i class='bx bx-group'></i>
-                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Units</span>
+                <span class="text-[15px] ml-4 h-6 text-gray-200 font-bold">Eenheden</span>
             </div>
         </a>
         @endrole
@@ -111,11 +111,11 @@
                 </ul>
             </div>
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Follow us</h3>
+                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Volg ons</h3>
                 <ul>
                     <li class="mb-4"><a href="#" target="_blank"
                                         class="text-gray-600 hover:underline">Facebook</a></li>
-                    <li><a href="#" target="_blank"
+                    <li><a href="#"  target="_blank"
                         class="text-gray-600 hover:underline">Instagram</a></li>
                 </ul>
             </div>

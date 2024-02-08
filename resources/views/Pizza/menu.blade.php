@@ -54,7 +54,7 @@
                                     <!-- Order Button -->
                                     <button type="submit"
                                             class="bg-green-800 text-white px-4 py-2 rounded-lg mt-6 hover:bg-green-700 focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80">
-                                        Place Order
+                                        Plaats bestelling
                                     </button>
                                 </form>
                                 <!-- Edit Form -->
@@ -63,7 +63,7 @@
                                 @role('employee')
                                 <div class="mt-6">
                                     <a href="{{ route('menu.edit', ['id' => $pizza->id]) }}" class=" bg-yellow-400 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring  focus:ring-opacity-80">
-                                        Edit
+                                        Aanpassen
                                     </a>
                                 </div>
 
@@ -72,11 +72,10 @@
                                     @method('DELETE')
                                     <button type="submit"
                                             class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-80">
-                                        Delete
+                                        Verwijderen
                                     </button>
                                 </form>
                                 @endrole
-
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,7 @@
     </x-slot:title>
     <div>
         <div class="text-3xl object-center">
-            <h1>Manager Create Food card</h1>
+            <h1>Manager Menu kaart aanmaken</h1>
             <br>
         </div>
     </div>
@@ -14,7 +14,7 @@
 
         <form action="{{ route('foodcard.store') }}" method="post" enctype="multipart/form-data" id="uploadForm">
             @csrf
-    
+
             <div class='w-full max-w-md mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
                 <div class='max-w-md mx-auto'>
                     <div class='h-[236px]'></div>

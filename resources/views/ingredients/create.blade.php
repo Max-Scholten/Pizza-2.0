@@ -2,11 +2,11 @@
 
 <x-nav-layout xmlns:X-slot="http://www.w3.org/1999/xlink">
     <x-slot:title>
-        Create Ingredient
+        Maak nieuw ingredient
     </x-slot:title>
     <div>
         <div class="text-3xl object-center">
-            <h1>Create Ingredient</h1>
+            <h1>Maak nieuw ingredient</h1>
             <br>
         </div>
         <form action="{{ route('ingredients.store') }}" method="post">

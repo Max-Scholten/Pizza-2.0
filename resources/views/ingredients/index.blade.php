@@ -2,11 +2,11 @@
 
 <x-nav-layout xmlns:X-slot="http://www.w3.org/1999/xlink">
     <x-slot:title>
-        Ingredients List
+        Ingredients Lijst
     </x-slot:title>
     <div>
         <div class="text-3xl object-center">
-            <h1>Ingredients List</h1>
+            <h1>Ingredients Lijst</h1>
             <br>
             <a href="{{ route('ingredients.create') }}">Create New Ingredients</a>
         </div>
@@ -24,9 +24,9 @@
             @foreach ($ingredients as $ingredient)
                 <tr>
                     <td>{{ $ingredient->topping }}</td>
-                    <td>${{ $ingredient->price }}</td>
+                    <td>€{{ $ingredient->price }}</td>
                     <td>
-                        <a href="{{ route('ingredients.edit', $ingredient->id) }}">Edit</a>
+                        <a href="{{ route('ingredients.edit', $ingredient->id) }}">Edit</a><br>
                     </td>
                     <td>
                         <form method="POST" action="{{ route('ingredients.destroy', $ingredient->id) }}">

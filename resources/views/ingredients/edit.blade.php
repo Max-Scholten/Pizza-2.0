@@ -1,10 +1,10 @@
 <x-nav-layout xmlns:X-slot="http://www.w3.org/1999/xlink">
     <x-slot:title>
-        Edit Ingredient
+        Pas Ingredient aan
     </x-slot:title>
     <div>
         <div class="text-3xl object-center">
-            <h1>Edit Ingredient</h1>
+            <h1>Pas Ingredient aan</h1>
             <br>
         </div>
         <form action="{{ route('ingredients.update', $ingredient->id) }}" method="post">
