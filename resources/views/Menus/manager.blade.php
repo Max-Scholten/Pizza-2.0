@@ -14,7 +14,7 @@
 
         <form action="{{ route('foodcard.store') }}" method="post" enctype="multipart/form-data" id="uploadForm">
             @csrf
-
+    
             <div class='w-full max-w-md mx-auto bg-white rounded-3xl shadow-xl overflow-hidden'>
                 <div class='max-w-md mx-auto'>
                     <div class='h-[236px]'></div>

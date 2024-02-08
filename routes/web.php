@@ -82,7 +82,8 @@ Route::get('/contact', function () {
 // routes/web.php
 
 // ...
-
+// Route to display the cart
+Route::get('/Pizza/cart', [CartController::class, 'index'])->name('pizza.cart');
 // Route to display the menu
 Route::get('/Pizza/menu', [OrderController::class, 'showmenu'])->name('pizza.menu');
 // Route to edit a pizza
@@ -95,24 +96,9 @@ Route::get('/Pizza/create', [FoodCartController::class, 'create'])->name('pizza.
 Route::post('/Menus/store', [FoodCartController::class, 'store'])->name('pizza.store');
 Route::delete('/menu/{id}', [FoodCartController::class, 'destroy'])->name('menu.destroy');
 
-
-
-// web.php
-
-
-
-// ...
-
 Route::get('/menu/{id}/edit', [FoodCartController::class, 'edit'])->name('menu.edit');
 
-
-
-
-
-
-
-
-// Update your routes/web.php file
+// Routes for eenheden CRUD
 
 Route::get('/units/index', [UnitsController::class, 'index'])->name('units.index');
 Route::get('/units/create', [UnitsController::class, 'create'])->name('units.create');
@@ -122,8 +108,7 @@ Route::put('/units/{id}', [UnitsController::class, 'update'])->name('units.updat
 Route::delete('/units/{id}', [UnitsController::class, 'destroy'])->name('units.destroy');
 
 
-//FoodCart
-// Ingredients Make
+// Routes for eenheden CRUD
 Route::get('/ingredients/index', [IngredientController::class, 'index'])->name('ingredients.index   ');
 Route::get('/ingredients/create', [IngredientController::class, 'create'])->name('ingredients.create');
 Route::post('/ingredients', [IngredientController::class, 'store'])->name('ingredients.store');
@@ -143,45 +128,11 @@ Route::get('/ingredients', [IngredientController::class, 'index'])->name('ingred
 
 
 
-
-// OrderController
-//Route::get('/cart/{id}/edit', [OrderController::class, 'edit'])->name('cart.edit');
-//Route::post('/orders/create', [FoodCartController::class, 'create'])->name('orders.create');
-//Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
-//Route::get('/Pizza/{menu}', [OrderController::class, 'show'])->name('orders.show');
-//Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
-//Route::put('/orders/{order}', [OrderController::class, 'update'])->name('orders.update');
-
-// PizzaController
-// ... (other routes)
-
-//Route::get('/menu', [PizzaController::class, 'index'])->name('menu');
-//Route::post('/add-to-cart', [PizzaController::class, 'addToCart'])->name('add.to.cart');
-//Route::get('/cart', [PizzaController::class, 'showCart'])->name('show.cart');
-//Route::post('/Pizza/create', [FoodCartController::class, 'create'])->name('foodcard.create');
-//Route::get('/menu', [FoodCartController::class, 'showMenu'])->name('menu');
-
-// ... (other routes)
-
-
 //ProfileController
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-
-// routes/web.php
-
-
-
-
-
-
-
-
-
-
 
 require __DIR__.'/auth.php';

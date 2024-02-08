@@ -21,7 +21,7 @@
                                     @csrf
                                     <p class='font-bold text-gray-700 text-[18px] leading-6 mb-1'>{{ $pizza->naam }}</p>
                                     <div class='flex flex-row'>
-                                        <p class='text-[15px] font-bold text-[#0FB478]'>{{ $pizza->prijs }}</p>
+                                        <p class='text-[15px] font-bold text-[#0FB478]'>€{{ $pizza->prijs }}</p>
                                     </div>
                                     <!-- Pizza Size Description -->
                                     <div class="overflow-y-auto max-h-28">
@@ -29,7 +29,7 @@
                                             {{ $pizza->beschrijving }}
                                         </p>
                                     </div>
-                                    
+
                                     <!-- Pizza Size Dropdown -->
                                     <label class="block text-sm font-medium text-black mt-4">Select Pizza Size:
                                         <select name="pizza_size" class="form-input">
@@ -75,8 +75,6 @@
                                         Delete
                                     </button>
                                 </form>
-
-
                                 @endrole
 
                             </div>

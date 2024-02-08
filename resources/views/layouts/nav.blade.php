@@ -14,7 +14,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <header class="bg-green-800 h-16 flex justify-end items-center fixed top-0 right-0 z-20 w-full">
-        <a href="/cart" class="block bg-green-800 flex-items-center cursor-pointer text-white p-5">
+        <a href="/Pizza/cart" class="block bg-green-800 flex-items-center cursor-pointer text-white p-5">
             <div class="flex items-center px-4">
                 <i class="bi bi-house-door-fill"></i>
                 <i class='bx bx-cart'></i>
