@@ -17,13 +17,25 @@ class CartController extends Controller
         $order->user_id = Auth::id();
         $order->menu_id = $request->menu_id;
         $order->grote = $request->grote; // Save selected pizza size
-        $order->ingredients =$request->ingredients; // Convert array to string
+
+        // Check if ingredients is an array before imploding
+        if (is_array($request->ingredients)) {
+            // Convert array to string
+            $ingredientsString = implode(', ', $request->ingredients);
+        } else {
+            // Set ingredients to an empty string
+            $ingredientsString = '';
+        }
+
+        $order->ingredients = $ingredientsString;
         $order->status_id = 1; // Assuming status_id 1 represents "Placed"
         $order->save();
 
         // Redirect to the cart page after placing the order
         return redirect()->route('cart.index');
     }
+
+
 
 
     public function index()
